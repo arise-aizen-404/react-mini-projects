@@ -1,7 +1,7 @@
 import "./styles.css";
 import React from "react";
-import data from "./data";
-import { SingleQuestion } from "./Question";
+import questions from "./data";
+import { Question } from "./Question";
 
 function App() {
   return (
@@ -9,9 +9,9 @@ function App() {
       <div className="container">
         <h3>FAQ</h3>
         <section className="info">
-          {data.map((question) => {
+          {questions.map((question) => {
             return (
-              <SingleQuestion
+              <Question
                 title={question.title}
                 info={question.info}
                 key={question.id}

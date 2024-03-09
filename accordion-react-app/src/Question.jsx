@@ -1,19 +1,24 @@
 import { useState } from "react";
-export const SingleQuestion = (props) => {
-  // add a state variable here
+import PropTypes from "prop-types"; // Import PropTypes
+
+export const Question = (props) => {
   const [isVisible, setVisible] = useState(false);
 
   return (
     <article className="question">
       <header>
         <h4>{props.title}</h4>
-        {/* make this toggle functionality onClick */}
         <button className="btn" onClick={() => setVisible((prev) => !prev)}>
           {isVisible ? "-" : "+"}
         </button>
       </header>
-      {/* make this render conditionally */}
       {isVisible && <p>{props.info}</p>}
     </article>
   );
+};
+
+// Add prop type validation
+Question.propTypes = {
+  title: PropTypes.string.isRequired,
+  info: PropTypes.string.isRequired,
 };
