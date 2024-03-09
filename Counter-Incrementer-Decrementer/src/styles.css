@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ebebeb;
+}
+.App {
+  background: white;
+  box-shadow: 4px 4px 6px rgba(0 0 0 / 0.2), -5px -5px 10px rgb(244, 244, 244);
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  & .counter {
+    display: block;
+    font-size: 4rem;
+    font-weight: 600;
+    color: grey;
+    margin-bottom: 1rem;
+  }
+}
+.btn {
+  font-size: 1em;
+  padding: 7px 15px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 3px 3px 3px rgba(0 0 0 / 0.2);
+  color: whitesmoke;
+  &:hover {
+    cursor: pointer;
+    box-shadow: none;
+    transition: box-shadow 500ms ease-in;
+  }
+  &:focus {
+    outline: none;
+  }
+  &.btn-in {
+    background-color: rgb(34, 255, 97);
+  }
+  &.btn-re {
+    background-color: rgb(255, 175, 69);
+  }
+  &.btn-de {
+    background-color: rgb(150, 39, 255);
+  }
+}
+.btn:not(:last-of-type) {
+  margin-right: 10px;
+}
